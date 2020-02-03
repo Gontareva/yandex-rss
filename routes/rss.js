@@ -3,7 +3,7 @@ var router = express.Router();
 var path = require('path');
 
 /* GET home page. */
-router.get('/rss', function(req, res, next) {
+router.get('/', function(req, res, next) {
   res.contentType('application/rss+xml');
 
   res.sendFile(path.join(__dirname, '../views', 'rss.html'), { title: 'Express' });
