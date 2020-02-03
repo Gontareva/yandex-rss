@@ -4,9 +4,7 @@ var path = require('path');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.contentType('application/rss+xml');
-
-  res.sendFile(path.join(__dirname, '../views', 'rss.html'), { title: 'Express' });
+  res.render('index', { title: 'Express' });
 });
 
 module.exports = router;
