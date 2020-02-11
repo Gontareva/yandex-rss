@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var rssRouter = require('./routes/rss');
+var rssPublicationsRouter = require('./routes/rssPublications');
 var widgetsRouter = require('./routes/widgets');
 var usersRouter = require('./routes/users');
 
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/rss', rssRouter);
+app.use('/rssPublications', rssPublicationsRouter);
 app.use('/widgets', widgetsRouter);
 app.use('/users', usersRouter);
 
